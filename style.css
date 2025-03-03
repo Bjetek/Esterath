@@ -1,0 +1,2057 @@
+/* #region Czcionki */
+
+@font-face {
+    font-family: 'Light';
+    src: url('fonts/BigShouldersDisplay-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Regular';
+    src: url('fonts/BigShouldersDisplay-Regular.ttf') format('truetype');
+}
+
+/*
+@font-face {
+    font-family: 'UndyingHope';
+    src: url('fonts/High Summit.ttf') format('truetype');
+}
+*/
+
+@font-face {
+    font-family: 'UndyingHope';
+    src: url('fonts/ShipsCargoRegular.ttf') format('truetype');
+}
+
+
+/* #endregion */
+
+/* #region Body */
+
+body {
+    font-family: Light, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    overflow-y: scroll;
+    /* Przewijanie w pionie */
+}
+
+/* #endregion */
+
+/* #region HTML */
+html {
+    scroll-behavior: smooth;
+}
+
+/* #endregion */
+
+/* #region Nagłówek */
+header {
+    font-family: Regular, sans-serif;
+    background-color: transparent;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 60px;
+    /* Ustalona wysokość nagłówka */
+    display: flex;
+    align-items: center;
+    /* Wyśrodkowanie elementów w pionie */
+    justify-content: space-between;
+    /* Rozdzielenie elementów po obu stronach */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Wyśrodkowanie elementów w pionie w nawigacji */
+    width: 100%;
+    padding: 0 1.5em;
+    /* Zachowanie marginesów po bokach */
+    box-sizing: border-box;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 2em;
+}
+
+.menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.social-media {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    /* Ustawienie ikon w pionie */
+}
+
+.social-media li {
+    margin-left: 15px;
+}
+
+.social-media li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hamburger {
+    display: none;
+    /* Ukryty na większych ekranach */
+    flex-direction: column;
+    justify-content: center;
+    /* Wyśrodkowanie hamburgera w pionie */
+    align-items: center;
+    cursor: pointer;
+}
+
+/*ikonka menu rozwijanego*/
+.hamburger i {
+    font-size: 1.2em;
+    /* Dostosuj rozmiar ikony */
+    color: #fff;
+    /* Kolor ikony */
+    transition: transform 0.5s ease;
+    /* Płynne przejście przy zmianie ikony */
+}
+
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        /* Ukryj menu na mniejszych ekranach */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        /* Pozycja menu poniżej nagłówka */
+        left: 5;
+        width: 200px;
+        background-color: rgba(87, 87, 87, 0.55);
+        /* Ciemniejsze, półprzezroczyste tło */
+        padding: 10px 0;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        /* Subtelny cień, aby menu się wyróżniało */
+        transition: all 0.3s ease-in-out;
+        /* Dodanie płynnej animacji */
+        border-radius: 10px;
+        z-index: 1001;
+    }
+
+    .menu.show {
+        display: flex;
+        /* Pokaż menu po kliknięciu */
+    }
+
+    .menu li {
+        margin: 15px 0;
+        /* Większe odstępy między pozycjami */
+        text-align: center;
+        /* Wyrównanie tekstu do środka */
+        padding: 0;
+        /* Odstęp od lewej krawędzi menu */
+    }
+
+    .menu li a {
+        color: #ffffff;
+        /* Kolor tekstu */
+        text-decoration: none;
+        font-size: 1.2em;
+        /* Lekko większa czcionka */
+        font-weight: 600;
+        /* Grubszy tekst */
+        display: block;
+        padding: 5px 0;
+        transition: all 0.3s ease;
+        /* Płynna animacja */
+    }
+
+    .menu li a:hover {
+        color: #ffcc00;
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: scale(1.02);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Dla ikony hamburgera */
+    .hamburger i {
+        font-size: 1.5em;
+        /* Większa ikona */
+        color: #ffffff;
+        /* Kolor ikony */
+        padding: 10px;
+        transition: color 0.3s ease;
+        /* Płynna zmiana koloru */
+    }
+
+    .hamburger i:hover {
+        color: #ffcc00;
+        /* Zmiana koloru ikony na hover */
+    }
+
+    .hamburger {
+        display: flex;
+        /* Pokaż hamburger menu na mniejszych ekranach */
+    }
+}
+
+
+
+
+/* #endregion */
+
+/* #region Main */
+main {
+    padding-top: 0;
+    /* Usunięcie górnego paddingu */
+}
+
+/* #endregion */
+
+/* #region Home Slide */
+.s_Esterath-background {
+    background-image: url('obrazy/Esterth_Welcome.png');
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh + 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: -40px;
+    overflow: hidden;
+    /* Aby iskierki nie wychodziły poza kontener */
+}
+
+.title-container {
+    position: relative;
+    width: 80%;
+    max-width: 3360px;
+    /*height: 60vh;*/
+    aspect-ratio: 16/9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.s_Esterath_Esterath {
+    background-image: url('obrazy/Esterath.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.phrase {
+    position: absolute;
+    /* Zmiana na absolute */
+    font-size: clamp(1.2rem, 5vw, 10vh);
+    font-family: 'UndyingHope', sans-serif;
+    color: #fff;
+    background-color: transparent;
+    padding: 10px 20px;
+    text-wrap: nowrap;
+    bottom: 12.5%;
+    /* Przypisanie do dolnego rogu */
+    right: 5%;
+    /* Przypisanie do prawego rogu */
+}
+
+/* Animacja - The undying hope */
+@keyframes glow-in {
+    from {
+        opacity: 0;
+    }
+
+    65% {
+        opacity: 1;
+        text-shadow: 0 0 25px white;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0.7;
+    }
+}
+
+.glowIn {
+    color: white;
+}
+
+.glowIn span {
+    animation: glow-in 1.5s both;
+    /* Czas trwania animacji */
+}
+
+/* Stylizacja iskier */
+.spark {
+    position: absolute;
+    bottom: 22%;
+    /* Pozycja początkowa blisko ogniska */
+    width: 3px;
+    height: 3px;
+    background-color: rgba(255, 215, 0, 0.8);
+    /* Kolor złoty, jak iskry */
+    border-radius: 50%;
+    opacity: 0;
+    animation-name: spark-animation;
+    /* Nazwa animacji */
+    animation-timing-function: ease-in-out;
+}
+
+/* Definicja animacji unoszenia iskierek */
+@keyframes spark-animation {
+    0% {
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(var(--spark-x), var(--spark-y)) scale(1.5);
+        opacity: 0;
+    }
+}
+
+
+/* #endregion */
+
+/* #region About Esterath Slide */
+.s_AboutEsterathSection {
+    background-image: url('obrazy/esterath_story_background.png');
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh + 40px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.about-esterath-container {
+    flex: 0 0 30%;
+    /* Maksymalnie 30% szerokości */
+    padding: 5em;
+    box-sizing: border-box;
+    color: #fff;
+    z-index: 2;
+    background: transparent;
+    text-align: left;
+    z-index: 2;
+}
+
+/* Stylizacja tytułu */
+.about-esterath-container h1 {
+    /* font-size: 1.5rem; */
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+}
+
+/* Stylizacja opisu */
+.about-esterath-container p {
+    /* font-size: 1rem; */
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    /* Dynamiczna wartość między 1rem a 1.5rem */
+    line-height: 1.5;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Efekt deszczu */
+/* Kontener na deszcz */
+.rain {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.rain.back-row {
+    display: none;
+    bottom: 60px;
+    opacity: 0.5;
+}
+
+.drop {
+    position: absolute;
+    bottom: 100%;
+    /* width: 15px;
+    height: 120px; */
+    width: 20px;
+    /* Zwiększ szerokość kropli */
+    height: 150px;
+    /* Zwiększ długość kropli */
+    pointer-events: none;
+    animation: drop 0.5s linear infinite;
+}
+
+@keyframes drop {
+    0% {
+        transform: translateY(0vh);
+    }
+
+    100% {
+        transform: translateY(100vh);
+        /* Spadanie do samego dołu ekranu */
+    }
+}
+
+.stem {
+    width: 2px;
+    height: 60%;
+    margin-left: 7px;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25));
+    animation: stem 0.5s linear infinite;
+}
+
+@keyframes stem {
+    0% {
+        opacity: 1;
+    }
+
+    65% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1000px) {
+
+    .about-esterath-container {
+        flex: none;
+        width: 100%;
+        padding: 2em;
+        padding-top: 10vh;
+        padding-bottom: 0%;
+        box-sizing: border-box;
+        max-height: 77vh;
+    }
+}
+
+@media (min-width: 1001px) {
+    .about-esterath-container {
+        flex: 0 0 65%;
+    }
+
+    .about-esterath-container h1 {
+        font-size: 2.6rem;
+    }
+
+    .about-esterath-container p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1201px) {
+    .about-esterath-container {
+        flex: 0 0 55%;
+    }
+
+    .about-esterath-container h1 {
+        font-size: 3.6rem;
+    }
+
+    .about-esterath-container p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1601px) {
+    .about-esterath-container {
+        flex: 0 0 45%;
+    }
+
+    .about-esterath-container h1 {
+        font-size: 3.6rem;
+    }
+
+    .about-esterath-container p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 2001px) {
+    .about-esterath-container {
+        flex: 0 0 40%;
+    }
+
+    .about-esterath-container h1 {
+        font-size: 4.0rem;
+    }
+
+    .about-esterath-container p {
+        font-size: 2.4rem;
+    }
+}
+
+/* #endregion */
+
+/* #region Story Slide */
+.s_StorySection {
+    background-image: url('obrazy/storyBackground.png');
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh + 40px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.about-story-container {
+    flex: 0 0 30%;
+    /* Maksymalnie 30% szerokości */
+    padding: 5em;
+    box-sizing: border-box;
+    color: #fff;
+    z-index: 2;
+    background: transparent;
+    text-align: left;
+    z-index: 2;
+}
+
+/* Stylizacja tytułu */
+.about-story-container h1 {
+    /* font-size: 1.5rem; */
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+}
+
+/* Stylizacja opisu */
+.about-story-container p {
+    /* font-size: 1rem; */
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    /* Dynamiczna wartość między 1rem a 1.5rem */
+    line-height: 1.5;
+    margin: 0;
+    text-align: justify;
+    overflow-y: auto;
+}
+
+/* Kontener na drobinki */
+.dust-particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* Zapobiega interakcjom */
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Styl pojedynczej drobinki */
+.dust-particle {
+    position: absolute;
+    width: 4px;
+    /* Domyślny rozmiar */
+    height: 4px;
+    background: radial-gradient(circle, rgba(255, 223, 122, 1) 0%, rgba(255, 223, 122, 0.3) 70%, rgba(255, 223, 122, 0) 100%);
+    border-radius: 50%;
+    opacity: 0;
+    animation: float-up linear infinite;
+}
+
+/* Animacja unoszenia drobinek */
+@keyframes float-up {
+    0% {
+        transform: translateY(0) translateX(0) scale(1);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px) translateX(var(--drift-x)) scale(var(--scale));
+        opacity: 0;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .s_StorySection {
+        display: flex;
+        flex-direction: column;
+        /* Ustawienie elementów w kolumnie */
+        justify-content: center;
+        /* Wyśrodkowanie w pionie */
+        align-items: center;
+        /* Wyśrodkowanie w poziomie */
+        height: 100vh;
+        /* Upewnienie się, że sekcja zajmuje pełną wysokość ekranu */
+    }
+
+    .about-story-container {
+        flex: none;
+        width: 100%;
+        /* Ograniczenie szerokości dla lepszego wyglądu */
+        max-height: 77vh;
+        /* Maksymalna wysokość */
+        padding: 2em;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        box-sizing: border-box;
+        overflow: hidden;
+        /* Ukrycie nadmiaru */
+        display: flex;
+        flex-direction: column;
+        /* Zapewnienie, że tekst układa się w kolumnie */
+        justify-content: center;
+        /* Wyśrodkowanie tekstu w pionie */
+        align-items: center;
+        /* Wyśrodkowanie w poziomie */
+        text-align: center;
+        /* Wyśrodkowanie tekstu */
+    }
+
+    .about-story-container p {
+        max-height: 60vh;
+        /* Ograniczenie wysokości tekstu */
+        overflow-y: auto;
+        /* Włączenie przewijania */
+        scrollbar-width: none;
+        /* Ukrycie scrollbara w Firefox */
+        -ms-overflow-style: none;
+        /* Ukrycie scrollbara w IE */
+
+    }
+
+    .about-story-container h1 {
+        align-self: flex-start;
+        /* Wyrównanie do lewej */
+        width: 100%;
+        /* Nagłówek rozciąga się na całą szerokość */
+        text-align: left;
+        /* Tekst wyrównany do lewej */
+        margin-bottom: 1rem;
+    }
+
+    /* Ukrycie paska przewijania w WebKit (Chrome, Safari) */
+    .about-story-container p::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@media (min-width: 1001px) {
+    .about-story-container {
+        flex: 0 0 65%;
+    }
+
+    .about-story-container h1 {
+        font-size: 2.6rem;
+    }
+
+    .about-story-container p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1201px) {
+    .about-story-container {
+        flex: 0 0 65%;
+    }
+
+    .about-story-container h1 {
+        font-size: 3.6rem;
+    }
+
+    .about-story-container p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1601px) {
+    .about-story-container {
+        flex: 0 0 45%;
+    }
+
+    .about-story-container h1 {
+        font-size: 3.6rem;
+    }
+
+    .about-story-container p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 2001px) {
+    .about-story-container {
+        flex: 0 0 60%;
+    }
+
+    .about-story-container h1 {
+        font-size: 3.8rem;
+    }
+
+    .about-story-container p {
+        font-size: 2.3rem;
+    }
+}
+
+@media (min-width: 2201px) {
+    .about-story-container {
+        flex: 0 0 45%;
+    }
+
+    .about-story-container h1 {
+        font-size: 3.8rem;
+    }
+
+    .about-story-container p {
+        font-size: 2.3rem;
+    }
+}
+
+
+/* #endregion */
+
+/* #region Interactive Map Slide */
+#s_EsterathMapV3 {
+    position: relative;
+    display: flex;
+    /* Aktywacja Flexbox */
+    flex-direction: row;
+    /* Ustawienie elementów obok siebie (domyślnie) */
+    align-items: center;
+    /* Wyśrodkowanie pionowe */
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    overflow: hidden;
+}
+
+/* Obraz */
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Tekst */
+.text-container {
+    flex: 0 0 30%;
+    /* Maksymalnie 30% szerokości */
+    padding: 5em;
+    box-sizing: border-box;
+    color: #fff;
+    z-index: 2;
+    background: transparent;
+    text-align: left;
+}
+
+/* Stylizacja tytułu */
+.text-container h1 {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    /* Minimum 1.5rem, maksymalnie 3rem */
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+}
+
+/* Stylizacja opisu */
+.text-container p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    /* Dynamiczna wartość między 1rem a 1.5rem */
+    line-height: 1.5;
+    margin: 0;
+    text-align: justify;
+}
+
+/* Interaktywna nakładka (SVG) */
+.interactive-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+    z-index: 3;
+    /* Nad tekstem */
+}
+
+/* Interaktywne regiony */
+.b_region {
+    fill: transparent;
+    stroke: none;
+    stroke-width: 2;
+    pointer-events: all;
+}
+
+/* Kontener na ikonę */
+.icon-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Wyśrodkowanie */
+    width: 40px;
+    height: 40px;
+    z-index: 4;
+    /* Nad innymi elementami */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Obraz w kontenerze */
+.icon-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+    /* Płynna animacja powiększenia */
+}
+
+.icon-container:hover img {
+    transform: scale(1.2);
+    /* Powiększenie o 20% */
+}
+
+/* Kontener na elementy interaktywnej mapy */
+.interactiveMap-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    /* Na wierzchu */
+    display: none;
+    transition: transform 0.1s ease-in-out, opacity 0.1s ease-in-out;
+    transform: translateX(0);
+    position: absolute;
+    column-gap: 0;
+
+    transition: all 0.5s ease-in-out;
+}
+
+/* Obsługa zmiany tapety w tle (w zależności od wybranego regionu) */
+.slidershow_map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#r1_map:checked~.s1_map {
+    margin-left: 0;
+}
+
+#r2_map:checked~.s1_map {
+    margin-left: -14.28%;
+}
+
+#r3_map:checked~.s1_map {
+    margin-left: -28.56%;
+}
+
+#r4_map:checked~.s1_map {
+    margin-left: -42.84%;
+}
+
+#r5_map:checked~.s1_map {
+    margin-left: -57.12%;
+}
+
+#r6_map:checked~.s1_map {
+    margin-left: -71.40%;
+}
+
+#r7_map:checked~.s1_map {
+    margin-left: -85.68%;
+}
+
+.bar {
+    width: 50px;
+    height: 10px;
+    border: 2px solid #fff;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.bar:hover {
+    background: #fff;
+}
+
+input[name="r_map"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides_map {
+    width: 700%;
+    /* Zmieniono na 700%, aby pasowało do liczby slajdów */
+    height: 100%;
+    display: flex;
+
+}
+
+.slide_map {
+    width: 14.28%;
+    /* Każdy slajd zajmuje 1/7 szerokości */
+    transition: 0.6s;
+
+}
+
+.slide_map img {
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Obraz wypełnia całą przestrzeń bez zniekształceń */
+    background-position: center;
+
+}
+
+/* Map container */
+.map-container_v2 {
+    object-fit: contain;
+    width: 100%;
+    height: 80vh;
+    max-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.1s ease-in-out, opacity 0.1s ease-in-out;
+    /* Adding transition for transform and opacity */
+    z-index: 5;
+}
+
+/* Map image */
+.map_v2 {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-width: 100%;
+    max-height: 100%;
+    z-index: 10;
+}
+
+/* Selected state for showing map and description */
+.world-section_v2.selected .description-container_v2 {
+    display: flex;
+    width: 75%;
+    height: 800vh;
+    position: relative;
+    padding: 2vh;
+    opacity: 1;
+    transform: translateX(0);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    /* Slide in from the left */
+}
+
+.world-section_v2.selected .map-container_v2 {
+    width: 50%;
+    max-width: 700px;
+    height: 80vh;
+    margin: 0;
+    position: relative;
+    transition: transform 0.1s ease-in-out, opacity 0.1s ease-in-out;
+    transform: translateX(0);
+    /* Slide right to make space for description */
+}
+
+/* Description container */
+.description-container_v2 {
+    display: none;
+    text-align: justify;
+    font-size: 1.2rem;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    max-height: 70vh;
+    width: 100%;
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    opacity: 0;
+    transform: translateX(-100%);
+    color: white;
+    scrollbar-width: none;
+    max-width: 1100px;
+}
+
+/* Dla przeglądarek WebKit (Chrome, Edge, Safari) - ukrycie scrollbar */
+.region-description_v2::-webkit-scrollbar {
+    display: none;
+}
+
+.region-title_v2 {
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.region-description_v2 {
+    margin-top: 2rem;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    /* Dla Internet Explorer */
+
+}
+
+/* Reset transition on going back */
+.world-section_v2:not(.selected) .description-container_v2 {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    /* Slide out to the left */
+}
+
+.world-section_v2:not(.selected) .map-container_v2 {
+    width: 100%;
+    transform: translateX(0);
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+    /* Full width map */
+}
+
+@media (max-width: 768px) {
+    .map-container_v2 {
+        width: 100%;
+        height: 60vh;
+    }
+
+    .world-section_v2.selected .map-container_v2 {
+        display: none;
+    }
+
+    .description-container_v2 {
+        display: none;
+        width: 100%;
+    }
+
+    .description-container_v2.active {
+        display: flex;
+        opacity: 1;
+    }
+
+}
+
+/* Stylizacja SVG (wybierany obszar na mapie) */
+.map-overlay_v2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* Zablokowane interakcje poza regionami */
+    z-index: 10;
+    /* Umieszczamy SVG nad mapą */
+}
+
+/* Stylizacja dla obszaru wielokąta */
+.region_v2 {
+    /* fill: rgba(255, 0, 0, 0.2); */
+    fill: transparent;
+    pointer-events: auto;
+}
+
+.region_v2:hover {
+    /*fill: rgba(255, 0, 0, 0.4); /* Zmiana przezroczystości przy najechaniu */
+    fill: transparent;
+}
+
+.back-to-main-map-slide {
+    position: fixed;
+    bottom: 0;
+    /* Dolna krawędź przylega do rodzica */
+    left: 50%;
+    /* Wyrównanie środka do osi poziomej rodzica */
+    transform: translateX(-50%);
+    /* Przesunięcie, aby element był wyśrodkowany */
+    width: 5rem;
+    /* Szerokość kontenera */
+    height: 5rem;
+    /* Wysokość kontenera */
+    display: flex;
+    /* Aby wyśrodkować obraz w kontenerze */
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.back-to-main-map-slide img {
+    width: 100%;
+    /* Obraz wypełnia kontener */
+    height: auto;
+    /* Zachowanie proporcji */
+    object-fit: contain;
+    /* Dopasowanie obrazu do kontenera */
+    transition: transform 0.3s ease;
+    /* Dodanie płynnego przejścia */
+}
+
+.back-to-main-map-slide:hover img {
+    transform: rotate(-30deg);
+    /* Obrót o 30 stopni przeciwnie do ruchu wskazówek zegara */
+}
+
+@media (min-width: 1001px) and (min-height: 1001px) {
+    .icon-container {
+        display: none;
+    }
+
+    .description-container_v2 {
+        font-size: 2.2rem;
+    }
+
+    .back-to-main-map-slide {
+        width: 8rem;
+        height: 8rem;
+        ;
+    }
+}
+
+@media (min-height: 600px) and (min-width: 600px) {
+    .icon-container {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (min-height: 800px) and (min-width: 800px) {
+    .icon-container {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+@media (max-height: 1000px) {
+    .text-container {
+        display: none;
+    }
+}
+
+@media (max-width: 1000px) {
+    .text-container {
+        display: none;
+    }
+}
+
+@media (min-width: 1001px) {
+    .text-container {
+        flex: 0 0 44%;
+    }
+
+    .text-container h1 {
+        font-size: 4rem;
+    }
+
+    .text-container p {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1201px) {
+    .text-container {
+        flex: 0 0 42%;
+    }
+
+    .text-container h1 {
+        font-size: 4.2rem;
+    }
+
+    .text-container p {
+        font-size: 1.6rem;
+    }
+}
+
+@media (min-width: 1301px) {
+    .text-container {
+        /* flex: 0 0 38%; */
+        flex: 0 0 50%;
+    }
+
+    .text-container h1 {
+        font-size: 4.4rem;
+    }
+
+    .text-container p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 1501px) {
+    .text-container {
+        /* flex: 0 0 39%; */
+        flex: 0 0 45%;
+    }
+
+    .text-container h1 {
+        font-size: 4.6rem;
+    }
+
+    .text-container p {
+        font-size: 2.0rem;
+    }
+}
+
+@media (min-width: 2300px) {
+    .text-container {
+        flex: 0 0 28%;
+    }
+
+    .text-container h1 {
+        font-size: 4.6rem;
+    }
+
+    .text-container p {
+        font-size: 2.0rem;
+    }
+}
+
+@media (max-height: 1000px) {
+    .text-container {
+        display: none;
+    }
+}
+
+.particle-container {
+    position: absolute;
+    display: initial;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* Ukrywa cokolwiek, co wychodzi poza obszar kontenera */
+    pointer-events: none;
+    /* Zapobiega interakcji użytkownika z cząsteczkami */
+    z-index: 20;
+    /* Ustawia warstwę, aby znajdowała się nad obrazem, ale pod innymi elementami */
+}
+
+#particleCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.pagination-indicator {
+    display: flex;
+    justify-content: center;
+    /* Wyśrodkowanie poziome */
+    align-items: center;
+    /* Wyśrodkowanie pionowe */
+    gap: 1rem;
+    /* Odstęp między kropkami */
+    margin-top: 1rem;
+    /* Margines od góry sekcji */
+}
+
+/* Pojedyncza kropka */
+.circle {
+    width: 1rem;
+    /* Średnica kropki */
+    height: 1rem;
+    border-radius: 50%;
+    /* Okrągły kształt */
+    border: 2px solid #fff;
+    /* Biały okrąg */
+    background-color: transparent;
+    /* Brak wypełnienia */
+}
+
+/* Aktywna kropka */
+.circle.active {
+    background-color: #fff;
+    /* Wypełnienie aktywnej kropki */
+    border-color: #fff;
+    /* Zachowanie koloru obramowania */
+}
+
+/* #endregion */
+
+/* #region Concept Art Slide */
+.conceptArtMainPage {
+    background-image: url('obrazy/conceptArtBackground.png');
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh + 40px);
+}
+
+.deck-container {
+    position: absolute;
+    top: 80px;
+    display: none;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: transparent;
+    z-index: 0;
+}
+
+.cards-container {
+    position: relative;
+    width: 100%;
+    /* Wypełnia całą szerokość sekcji */
+    padding-top: 80px;
+    height: calc(100vh - 80px);
+    display: flex;
+    /* display: none; */
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    /* Równomierne rozmieszczenie */
+    align-items: center;
+    /* Wyśrodkowanie kart w poziomie */
+    gap: 10px;
+}
+
+/* Kontener na kartę */
+.flip-card-container {
+    /* width: 33.33%;  */
+    /* height: 80%;  */
+    width: 250px;
+    height: 400px;
+    perspective: 1000px;
+    /* Zachowanie efektu 3D */
+}
+
+/* Sama karta */
+.flip-card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+}
+
+/* Front i tył karty */
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+/* Front karty */
+.card-front {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Rewers karty */
+.card-back {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(180deg);
+    color: #fff;
+    font-size: 1.5rem;
+    position: relative;
+}
+
+/* Obraz w karcie */
+.card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Obraz na rewersie karty */
+.card-back img {
+    position: absolute;
+    /* Obraz pod tekstem */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 0;
+    /* Obraz pod tekstem */
+}
+
+/* Obrót karty */
+.flip-card-container:hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+/* Główny kontener stosu kart */
+.stack-container {
+    position: relative;
+    width: 100px;
+    /* Szerokość pojedynczej karty */
+    height: 200px;
+    /* Wysokość pojedynczej karty */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Kontener na stos kart */
+.card-stack {
+    position: relative;
+    width: fit-content;
+    /* Dopasuj szerokość do zawartości */
+    height: fit-content;
+    /* Dopasuj wysokość do zawartości */
+    display: flex;
+    justify-content: center;
+    /* Wycentruj stos na środku poziomo */
+    align-items: center;
+    /* Wycentruj stos na środku pionowo */
+    margin: 0 auto;
+    /* Środek ekranu */
+    overflow: hidden;
+}
+
+/* Pojedyncza karta */
+.card {
+    position: absolute;
+    width: 150px;
+    /* Nowa szerokość karty */
+    height: 250px;
+    /* Nowa wysokość karty */
+    margin-right: -30px;
+    /* Zmniejszenie widocznego odstępu między kartami */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, z-index 0.3s ease;
+    transform-origin: center center;
+}
+
+/* Wierzchnia karta */
+.card:nth-child(1) {
+    background-image: url('obrazy/CharactesMobile.png');
+    object-fit: contain;
+    z-index: 3;
+}
+
+/* Druga karta */
+.card:nth-child(2) {
+    background-image: url('obrazy/CreaturesMobile.png');
+    object-fit: contain;
+    transform: translateX(-10px);
+    z-index: 2;
+}
+
+/* Trzecia karta */
+.card:nth-child(3) {
+    background-image: url('obrazy/EnvironmentMobile.png');
+    object-fit: contain;
+    transform: translateX(-20px);
+    z-index: 1;
+}
+
+/* Animacja dla kart podczas przesunięcia */
+.card.dragging {
+    transition: none;
+    /* Wyłączamy animację, gdy użytkownik przeciąga */
+}
+
+
+/* Galerie Enviro Creatures Characters */
+.GalleryContainer {
+    background-color: transparent;
+    display: none;
+    position: absolute;
+    align-items: center;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    height: calc(100vh - 80px);
+}
+
+/* Unikalne style dla poszczególnych galerii */
+.GalleryContainer.Enviro {
+    /* background-color: #ffcc00; */
+    z-index: 10;
+}
+
+.GalleryContainer.Characters {
+    /* background-color: #9900ff; */
+    z-index: 11;
+}
+
+.GalleryContainer.Creatures {
+    /* background-color: #00ff88; */
+    z-index: 12;
+}
+
+.back-to-conceptart-main-silde {
+    position: absolute;
+    bottom: 0;
+    /* Dolna krawędź przylega do rodzica */
+    left: 50%;
+    /* Wyrównanie środka do osi poziomej rodzica */
+    transform: translateX(-50%);
+    /* Przesunięcie, aby element był wyśrodkowany */
+    width: 5rem;
+    /* Szerokość kontenera */
+    height: 5rem;
+    /* Wysokość kontenera */
+    display: flex;
+    /* Aby wyśrodkować obraz w kontenerze */
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.back-to-conceptart-main-silde img {
+    width: 100%;
+    /* Obraz wypełnia kontener */
+    height: auto;
+    /* Zachowanie proporcji */
+    object-fit: contain;
+    /* Dopasowanie obrazu do kontenera */
+    transition: transform 0.3s ease;
+    /* Dodanie płynnego przejścia */
+}
+
+.back-to-conceptart-main-silde:hover img {
+    transform: rotate(-30deg);
+    /* Obrót o 30 stopni przeciwnie do ruchu wskazówek zegara */
+}
+
+.gallery-items-container {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 80%;
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: 400px;
+    gap: 0.1px;
+    scrollbar-width: none;
+    /* Ukrycie scrollbar w Firefoksie */
+    -ms-overflow-style: none;
+    /* Ukrycie scrollbar w Internet Explorerze */
+    overflow-x: hidden;
+    /* Ukrycie poziomego scrollbara (przy powiększeniu ostatniego elementu w wierszu wychodzi on poza dostępny ekran) */
+}
+
+.gallery-items-container::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-item {
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    /* Efekt cienia */
+}
+
+.gallery-item img {
+    width: 100%;
+    /* Obraz wypełnia kontener */
+    height: 100%;
+    /* Obraz wypełnia kontener */
+    object-fit: cover;
+    /* Dopasowanie obrazu */
+}
+
+.item-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    /* Kolor tekstu */
+    font-size: 2rem;
+    /* Rozmiar czcionki */
+    font-weight: bold;
+    font-family: Light, sans-serif;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    /* Cień dla lepszej widoczności */
+    opacity: 0;
+    /* Domyślnie niewidoczne */
+    transition: opacity 0.3s ease;
+    /* Płynne pojawianie się tekstu */
+    pointer-events: none;
+    /* Wyklucza tekst z interakcji */
+}
+
+.gallery-item:hover .item-text {
+    opacity: 1;
+    /* Pokaż tekst po najechaniu */
+}
+
+
+@media (max-height: 800px) or (max-width: 800px) {
+    .deck-container {
+        display: flex;
+    }
+
+    .cards-container {
+        display: none;
+    }
+}
+
+@media (min-height: 801px) and (min-width: 801px) {
+    .gallery-items-container {
+        height: 90%;
+    }
+}
+
+@media (min-height: 1000px) and (min-width: 1000px) {
+    .flip-card-container {
+        width: 300px;
+        height: 550px;
+    }
+
+    .back-to-conceptart-main-silde {
+        height: 8rem;
+        width: 8rem;
+    }
+
+    .gallery-items-container {
+        height: 85%;
+    }
+}
+
+@media (min-height: 1200px) and (min-width: 1200px) {
+    .flip-card-container {
+        width: 400px;
+        height: 650px;
+    }
+}
+
+@media (min-height: 1200px) and (min-width: 1200px) {
+    .flip-card-container {
+        width: 400px;
+        height: 650px;
+    }
+}
+
+@media (min-height: 1300px) and (min-width: 1600px) {
+    .flip-card-container {
+        width: 500px;
+        height: 750px;
+    }
+}
+
+/* Sytlizacja podpisów galerii lightbox2 */
+.lightbox .lb-data .lb-caption {
+    font-size: 1.5rem;
+    /* Zmień rozmiar czcionki */
+    color: #fff;
+    /* Kolor tekstu */
+    line-height: 1.2;
+    /* Opcjonalne: odstęp między wierszami */
+}
+
+
+
+/* #endregion */
+
+/* #region About Author Slide */
+.s_AboutAuthorSection {
+    background-image: url('obrazy/author_background.png');
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh + 40px);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.about-me-container {
+    flex: 0 0 66%;
+    /* Maksymalnie 30% szerokości */
+    padding: 5em;
+    box-sizing: border-box;
+    color: #fff;
+    z-index: 2;
+    background: transparent;
+    text-align: left;
+    z-index: 2;
+
+}
+
+/* Stylizacja tytułu */
+.about-me-container h1 {
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 0 0 1rem 0;
+}
+
+/* Stylizacja opisu */
+.about-me-container p {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    margin: 0;
+    text-align: justify;
+}
+
+.my-photo {
+    flex: 1;
+    /* Zajmij pozostałą przestrzeń */
+    max-height: 70vh;
+    /* Maksymalna wysokość kontenera */
+    display: flex;
+    /* Użyj Flexboxa */
+    justify-content: flex-start;
+    /* Wyrównaj zawartość do lewej krawędzi */
+    align-items: center;
+    /* Wyśrodkuj zawartość w pionie */
+    overflow: hidden;
+    /* Ukryj nadmiar obrazu, jeśli jest większy niż kontener */
+    padding-left: 1rem;
+    /* Opcjonalny odstęp od lewej krawędzi */
+    z-index: 2;
+}
+
+.my-photo img {
+    max-width: 100%;
+    /* Obraz dopasowuje się do szerokości kontenera */
+    max-height: 100%;
+    /* Obraz dopasowuje się do wysokości kontenera */
+    object-fit: contain;
+    /* Zachowaj proporcje obrazu, nie ucinając jego części */
+}
+
+@media (max-width: 768px) {
+    .s_AboutAuthorSection {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .about-me-container {
+        flex: none;
+        width: 100%;
+        padding: 2em;
+        padding-top: 10vh;
+        padding-bottom: 0%;
+        box-sizing: border-box;
+        max-height: 77vh;
+    }
+
+    .about-me-container h1 {
+        font-size: 1.9rem;
+        font-weight: bold;
+        margin: 0 0 1rem 0;
+    }
+
+
+    .about-me-container p {
+        font-size: 1.4rem;
+        line-height: 1.3;
+        margin: 0;
+        text-align: justify;
+    }
+
+
+    .my-photo {
+        flex: none;
+        width: 100%;
+        height: 20vh;
+        max-height: 20vh;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0%;
+        margin-top: 30px;
+    }
+
+    .my-photo img {
+        background-image: url('obrazy/logo100.png');
+        max-width: 110px;
+        max-height: 110px;
+    }
+}
+
+@media (max-width: 400px) {
+    .s_AboutAuthorSection {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .about-me-container {
+        flex: none;
+        width: 100%;
+        padding: 2em;
+        padding-top: 10vh;
+        padding-bottom: 0%;
+        box-sizing: border-box;
+        max-height: 77vh;
+    }
+
+    .about-me-container h1 {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin: 0 0 1rem 0;
+    }
+
+    .about-me-container p {
+        font-size: 1.1rem;
+        line-height: 1.3;
+        margin: 0;
+        text-align: justify;
+    }
+
+    .my-photo {
+        flex: none;
+        width: 100%;
+        height: 20vh;
+        max-height: 20vh;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0%;
+        margin-top: 30px;
+    }
+
+    .my-photo img {
+        background-image: url('obrazy/logo100.png');
+        max-width: 110px;
+        max-height: 110px;
+    }
+}
+
+@media (min-width: 1001px) {
+    .about-me-container {
+        flex: 0 0 60%;
+        padding: 5em;
+    }
+
+    .about-me-container h1 {
+        font-size: 2.8rem;
+    }
+
+    .about-me-container p {
+        font-size: 1.6rem;
+    }
+
+
+}
+
+@media (min-width: 1201px) {
+    .about-me-container {
+        flex: 0 0 55%;
+    }
+
+    .about-me-container h1 {
+        font-size: 3.4rem;
+    }
+
+    .about-me-container p {
+        font-size: 1.7rem;
+    }
+}
+
+@media (min-width: 1601px) {
+    .about-me-container {
+        flex: 0 0 45%;
+    }
+
+    .about-me-container h1 {
+        font-size: 3.6rem;
+    }
+
+    .about-me-container p {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 2001px) {
+    .about-me-container {
+        flex: 0 0 55%;
+    }
+
+    .about-me-container h1 {
+        font-size: 4.0rem;
+    }
+
+    .about-me-container p {
+        font-size: 2.4rem;
+    }
+}
+
+@media (max-height: 600px) {
+    .about-me-container h1 {
+        font-size: 2.1rem
+    }
+
+    .about-me-container p {
+        font-size: 1.3rem
+    }
+}
+
+/* Iskierka */
+.sparkGreen {
+    position: absolute;
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 40%, rgba(0, 255, 0, 0.5) 100%);
+    border-radius: 50%;
+    filter: blur(1px);
+    animation: riseAlongParabola var(--animation-duration, 4s) linear forwards;
+    opacity: 0.8;
+    z-index: 1;
+    /* Zapewnia, że iskierki są na spodzie */
+}
+
+/* Animacja unoszenia się wzdłuż paraboli */
+@keyframes riseAlongParabola {
+    0% {
+        transform: translate(0, 0);
+        /* Start na dole */
+        opacity: 1;
+        /* Pełna widoczność */
+    }
+
+    25% {
+        transform: translateX(calc(var(--parabola-width) * 0.25)) translateY(-11.25vh);
+        /* 1/4 wysokości paraboli */
+    }
+
+    50% {
+        transform: translateX(calc(var(--parabola-width) * 0.5)) translateY(-22.5vh);
+        /* Połowa wysokości paraboli */
+    }
+
+    75% {
+        transform: translateX(calc(var(--parabola-width) * 0.75)) translateY(-33.75vh);
+        /* 3/4 wysokości paraboli */
+    }
+
+    100% {
+        transform: translateX(calc(var(--parabola-width))) translateY(-45vh);
+        /* Górny koniec paraboli */
+        opacity: 0;
+        /* Zanikanie */
+    }
+}
+
+/* #endregion */
+
+/* #region Ramka wokół każdego slajdu */
+/* Kontener na ramkę */
+.frame-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* Umieszczamy nad tłem, ale pod treścią */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    /* Zapobiega interakcji z ramką */
+}
+
+/* Obraz ramki */
+.frame-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Dopasowanie do sekcji */
+}
+
+/* #endregion */
+
+/* #region Stopka */
+footer {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    /* Ukrycie stopki początkowo */
+    transition: transform 0.3s ease;
+    /* Płynne przejście dla widoczności */
+    z-index: 1;
+}
+
+footer.visible {
+    transform: translateY(0);
+    /* Wyświetlenie stopki */
+}
+
+
+
+/* #endregion */

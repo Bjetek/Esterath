@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esterath</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!--poniższy link - aby móc korzystać z font awesome (rozwijane menu)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Linki do Lightbox2 -->
+    <link href="/lightbox2/css/lightbox.css" rel="stylesheet">
+    <script src="/lightbox2/js/lightbox.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <!-- Hamburger button -->
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <ul class="menu">
+                <li><a href="#s_Esterath">Home</a></li>
+                <li><a href="#s_AboutEsterath">Esterath</a></li>
+                <li><a href="#s_Story">Story</a></li>
+                <li><a href="#s_EsterathMapV3">Map</a></li>
+                <li><a href="#sekcja5">Timeline</a></li>
+                <li><a href="#s_ConceptArt">Concept Art</a></li>
+                <li><a href="#s_AboutAuthor">About Me</a></li>
+            </ul>
+            <ul class="social-media">
+                <li><a href="#"><i class="fab fa-artstation"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="s_Esterath" class="s_Esterath-background">
+            <!-- Kontener z ramką -->
+            <div class="frame-container">
+                <img src="obrazy/transition bar.png" alt="Frame">
+            </div>
+            <div class="title-container">
+                <div id="Estarth_phrase" class="s_Esterath_Esterath"></div>
+                <div class="phrase glowIn">The undying hope</div>
+                <div class="sparks-container"></div> <!-- Iskierki wewnątrz title-container -->
+            </div>
+        </section>
+
+        <section id="s_AboutEsterath" class="s_AboutEsterathSection">
+            <!-- Kontener z ramką -->
+            <div class="frame-container">
+                <img src="obrazy/transition bar.png" alt="Frame">
+            </div>
+            <!-- Kontener na tekst O Esterath-->
+            <div class="about-esterath-container">
+                <h1>Esterath</h1>
+                <p>Esterath is the epic adventure project, which takes the viewers and readers to the world of Esterath, 
+                    where darkness does not always hide in shadows and brightness does not always become light. It's time to go on the great adventure, traveler. 
+                    Get ready to meet unknown lands, face blood-chilling creatures and immerse yourself in story that will take your breath away. 
+                    Embark on an epic journey where an Undying Hope guides your every step and your goal shines on the horizon. 
+                    It's time for you, as an intrepid traveler, to take up the challenge, reclaim what is yours, and write your name on the page of history. 
+                    Adventure awaits - dare to experience it!
+                </p>
+            </div>      
+            <!-- Deszcz -->
+            <div class="rain front-row"></div>
+            <div class="rain back-row"></div>      
+        </section>
+
+        <section id="s_Story" class="s_StorySection">
+            <!-- Kontener z ramką -->
+            <div class="frame-container">
+                <img src="obrazy/transition bar.png" alt="Frame">
+            </div>
+            <!-- Kontener na tekst Story -->
+            <div class="about-story-container">
+                <h1>Story</h1>
+                <p>Somewhere in the World of Esterath, in the land of the Holy Dragons, Alornard is once again targeted by the merciless Reughtar. 
+                    As a result of the brutal conflict, the main commander of the elite group of hunters, Drakhan, is killed. 
+                    Alornard falls, and only seven steadfast survivors emerge from the battlefield in main camp unscathed: Emeran - Drakhan's son, Zultan - Drakhan's fearless companion, 
+                    Worgen - a master blacksmith of unparalleled skill, Iris - a healer with a heart full of compassion, Kahyn - 
+                    Emeran's loyal friend, Ajna - the savvy daughter of healer Iris, and Nidia - the brave daughter of blacksmith Worgen. 
+                    After the fall of Alornard, the survivors are forced to flee to Clenyia. However, the bloodthirsty Reughtar wants to complete his destruction and begins hunting the refugees, sowing fear and uncertainty in their hearts. 
+                    From now on, everyone must rely only on themselves, surviving in loneliness and pain that cannot be soothed. Despite this, Emeran does not intend to give up - he decides to stand at the head of the Dragon Team, uniting the survivors. 
+                    Brought together by their desire to regain their lost legacy, they devise a desperate plan. 
+                    With undying hope as the only beacon in the darkness of their path, they embark on a risky expedition in search of the Holy Dragons....
+                </p>
+            </div>      
+            <!-- Kontener na drobinki pyłku -->
+            <div class="dust-particles-container"></div>     
+        </section>
+
+        <section id="s_EsterathMapV3">
+            <!-- Kontener z ramką -->
+            <div class="frame-container">
+                <img src="obrazy/transition bar.png" alt="Frame">
+            </div>
+            <!-- Obraz w kontenerze -->
+            <div class="image-container">
+                <img src="obrazy/ilustracja-mapa2dark.png" alt="Mapa Esterath" />
+            </div>
+
+            <!-- Kontener na tekst -->
+            <div class="text-container">
+                <h1>World of<br>Esterath</h1>
+                <p>
+                    The world of Esterath is a land where weakness has no place.
+                    Where once human drew lines between good and evil, wild moss now grows, and dense bushes cover
+                    forgotten traces.
+                    The boundaries you set should be exactly where you fell you need them.
+                    Every choice you make could determine the fate of you and your companions, so let your decisions be
+                    wise, and your boundaries–well thought out.
+                    Stand by the side of loyal companions, fight for freedom, uncover forgotten secrets, and explore
+                    vibrant places that hide untold histories.
+                    Weave yourself into this beautiful, dark, and unpredictable tale, and experience an adventure that
+                    will stay with you forever.
+                </p>
+            </div>
+
+            <!-- SVG nakładka -->
+            <svg class="interactive-overlay" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
+                <polygon
+                    points="632,292 586,334 551,382 561,436 571,471 502,524 476,565 403,621 346,733 369,753 463,721 519,697 675,660 697,739 746,773 822,861 904,795 985,743 1107,838 1248,916 1328,961 1375,927 1362,870 1284,809 1265,763 1231,724 1231,692 1214,651 1199,614 1214,565 1273,531 1312,495 1300,470 1283,429 1280,392 1312,323 1290,272 1199,284 1171,247 1129,242 999,273 926,334 834,341 760,305 688,288"
+                    class="b_region" data-region="Region 1" />
+            </svg>
+
+            <!-- Kontener z ikoną -->
+            <div class="icon-container">
+                <img src="obrazy/loupe.png" alt="Ikona lupki" />
+            </div>
+
+            <!-- Kontener na intraktywną mapę -->
+            <div class="interactiveMap-container world-section_v2" id="s_IntertactiveMap">
+                <!-- Kontener z ramką -->
+                <div class="frame-container">
+                    <img src="obrazy/transition bar.png" alt="Frame">
+                </div>
+                <div class="slidershow_map">
+
+                    <!-- obsługa tapety (w zależności od wybranego regionu)-->
+                    <div class="slides_map">
+
+                        <input type="radio" name="r_map" id="r1_map" checked>
+                        <input type="radio" name="r_map" id="r2_map">
+                        <input type="radio" name="r_map" id="r3_map">
+                        <input type="radio" name="r_map" id="r4_map">
+                        <input type="radio" name="r_map" id="r5_map">
+                        <input type="radio" name="r_map" id="r6_map">
+                        <input type="radio" name="r_map" id="r7_map">
+
+                        <div class="slide_map s1_map">
+                            <img src="obrazy/ilustracja-mapa2dark.png" alt=""> <!-- r1 -->
+                            <!-- Kontener na unoszące się pyłki -->
+                            <div class="particle-container">
+                                <canvas id="particleCanvas"></canvas>
+                            </div>
+                        </div>
+                        <div class="slide_map">
+                            <img src="obrazy/Boromushi_Background.png" alt=""> <!-- r2 -->
+                        </div>
+                        <div class="slide_map">
+                            <img src="obrazy/NorthAresia_Background.png" alt=""> <!-- r3 -->
+                        </div>
+                        <div class="slide_map">
+                            <img src="obrazy/SouthAresia_Background.png" alt=""> <!-- r4 -->
+                        </div>
+                        <div class="slide_map">
+                            <img src="obrazy/Clenyia_Background.png" alt=""> <!-- r5 -->
+                        </div>
+                        <div class="slide_map">
+                            <img src="obrazy/Alornard_Background.png" alt=""> <!-- r6 -->
+                        </div>
+                        <div class="slide_map">
+                            <img src="obrazy/Reughtar_Background.png" alt=""> <!-- r7 -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="description-container_v2 hidden">
+                    <h2 class="region-title_v2">Region Name</h2>
+                    <p class="region-description_v2">DEsterath is the epic adventure project, which takes the viewers
+                        and
+                        readers to the world of Esterath, darkness does not always hide in shadows and brightness does
+                        not
+                        always become light. It's time to go on the great adventure, traveler. Get ready to meet
+                        legendary
+                        heroes that will take you to heights of courage, face blood-chilling monsters and immerse
+                        yourself
+                        in landscapes that will take your breath away. Embark on an epic journey where an Undying Hope
+                        guides your every step and your goal shines on the horizon. It's time for you, as an intrepid
+                        traveler, to take up the challenge, reclaim what is yours, and write your name among the stars.
+                        Adventure awaits - dare to experience it!</p>
+                    <!-- Wskaźnik do wybranego opisu -->
+                    <div class="pagination-indicator">
+                        <span class="circle active" data-index="1"></span> <!-- Aktywna kropka -->
+                        <span class="circle" data-index="2"></span> <!-- Nieaktywna kropka -->
+                    </div>
+                </div>
+                <div class="map-container_v2">
+                    <img src="obrazy/map_main.png" alt="Mapa świata" id="worldMap" class="map_v2">
+
+                    <!-- SVG na mapie -->
+                    <svg class="map-overlay_v2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1250 1080"
+                        preserveAspectRatio="xMidYMid meet">
+                        <polygon
+                            points="384,279 78,281 44,379 62,509 135,595 224,645 421,607 404,430 453,360 486,364 502,220 465,183 444,243"
+                            class="region_v2" id="NorthAresia" />
+                        <polygon
+                            points="393,521 404,430 444,379 531,319 696,379 732,487 775,515 739,565 696,635 625,594 500,622 480,612 455,632 433,613"
+                            class="region_v2" id="Clenyia" />
+                        <polygon
+                            points="770,813 1207,945 1231,859 1113,791 974,646 904,545 920,438 945,342 911,331 867,395 741,386 702,391 718,481 776,522 723,565 703,646 734,674 787,668 807,748 773,774"
+                            class="region_v2" id="Reughtar" />
+                        <polygon
+                            points="150,607 226,648 278,613 304,634 356,614 422,604 465,681 432,824 351,859 287,939 188,1057 131,1066 107,886 145,760 128,703"
+                            class="region_v2" id="SouthAresia" />
+                        <polygon
+                            points="453,855 424,820 454,692 420,611 439,608 468,628 623,593 716,634 733,668 782,654 816,726 719,955 676,996 572,933 500,917"
+                            class="region_v2" id="Alornard" />
+                        <polygon
+                            points="783,28 838,127 842,202 872,313 859,321 745,248 679,214 575,208 516,146 458,144 488,110 554,60 610,29 712,62"
+                            class="region_v2" id="Boromushi" />
+                    </svg>
+                </div>
+
+                <!-- Kontener na ikonkę wyjścia (drogowskaz) -->
+                <div class="back-to-main-map-slide">
+                    <img src="obrazy/drogowskaz.png">
+                </div>
+
+            </div>
+        </section>
+
+        <section id="s_ConceptArt" class="conceptArtMainPage">
+            <!-- Kontener z ramką -->
+            <div class="frame-container">
+                <img src="obrazy/transition bar.png" alt="Frame">
+            </div>
+
+            <!-- Kontener na stos kart (rozwiązanie dla małych ekranów)-->
+            <div class="deck-container">
+                <div class="stack-container">
+                    <!-- Karty -->
+                    <div class="card card-top" data-id="Enviro"></div>
+                    <div class="card card-middle" data-id="Characters"></div>
+                    <div class="card card-bottom" data-id="Creatures"></div>
+                </div>
+
+            </div>
+            <!-- Kontener wypełniający sekcję (rozwiązanie dla większych ekranów) -->
+            <div class="cards-container">
+                <!-- Environment card -->
+                <div class="flip-card-container" data-card-id="Enviro" style="padding-left: 10px;">
+                    <div class="flip-card">
+                        <!-- Front karty -->
+                        <div class="card-front">
+                            <img src="obrazy/EnvironmentCardFront.png" alt="Environment">
+                        </div>
+                        <!-- Rewers karty -->
+                        <div class="card-back">
+                            <img src="obrazy/EnvironmentCardBack.png" alt="Environment Back">
+                        </div>
+                    </div>
+                </div>
+                <!-- Characters card -->
+                <div class="flip-card-container" data-card-id="Characters">
+                    <div class="flip-card">
+                        <!-- Front karty -->
+                        <div class="card-front">
+                            <img src="obrazy/CharactersCardFront.png" alt="Characters">
+                        </div>
+                        <!-- Rewers karty -->
+                        <div class="card-back">
+                            <img src="obrazy/CharactersCardBack.png" alt="Characters Back">
+                        </div>
+                    </div>
+                </div>
+                <!-- Creatures card -->
+                <div class="flip-card-container" data-card-id="Creatures" style="padding-right: 10px;">
+                    <div class="flip-card">
+                        <!-- Front karty -->
+                        <div class="card-front">
+                            <img src="obrazy/CreaturesCardFront.png" alt="Creatures">
+                        </div>
+                        <!-- Rewers karty -->
+                        <div class="card-back">
+                            <img src="obrazy/CreaturesCardBack.png" alt="Creatures Back">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Kontener na galerię z Enviro -->
+            <div class="GalleryContainer Enviro">
+                <!-- Miejsce na obrazy -->
+                 <div class="gallery-items-container">
+                    <div class="gallery-item">
+                        <img src="/obrazy/Ashen_Wasteland/image1.png" alt="Ashen_Wasteland">
+                        <span class="item-text">Ashen Wasteland</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/obrazy/Crystal_Canyon/image1.png" alt="Crystal_Canyon">
+                        <span class="item-text">Crystal Canyon</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/obrazy/Emethral_Deposit/image1.png" alt="Emethral_Deposit">
+                        <span class="item-text">Emethral Deposit</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/obrazy/Demonic_Cathedral/image1.png" alt="Demonic_Cathedral">
+                        <span class="item-text">Demonic Cathedral</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/obrazy/Abadoned_Village/image1.png" alt="Abadoned_Village">
+                        <span class="item-text">Abadoned Village</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/obrazy/Dragon_Gate/image1.png" alt="Dragon_Gate">
+                        <span class="item-text">Dragon Gate</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/obrazy/Dragon_Sanctuary/image1.png" alt="Dragon_Sanctuary">
+                        <span class="item-text">Dragon Sanctuary</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/obrazy/White_Palace/image1.png" alt="White_Palace">
+                        <span class="item-text">White Palace</span>
+                    </div>
+                 </div>
+                <!-- Przycisk powrotu -->
+                <div class="back-to-conceptart-main-silde">
+                    <img src="/obrazy/drogowskaz.png">
+                </div>
+            </div>
+            <!-- Kontener na galerię z Characters -->
+            <div class="GalleryContainer Characters">
+                <!-- Miejsce na obrazy -->
+                 <div class="gallery-items-container">
+                    <div class="gallery-item">
+                        <img src="/obrazy/Drakhan/image1.png" alt="Drakhan">
+                        <span class="item-text">Drakhan</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/obrazy/Worgen/image1.png" alt="Worgen">
+                        <span class="item-text">Worgen</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/obrazy/Hermit_Theodor/image1.png" alt="Hermit_Theodor">
+                        <span class="item-text">Hermit Theodor</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/obrazy/Cold/image1.png" alt="Cold">
+                        <span class="item-text">Cold</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/obrazy/Ice_Lady/image1.png" alt="Ice_Lady">
+                        <span class="item-text">Ice Lady</span>
+                    </div>
+                 </div>
+                <!-- Przycisk powrotu -->
+                <div class="back-to-conceptart-main-silde">
+                    <img src="/obrazy/drogowskaz.png">
+                </div>                
+            </div>
+            <!-- Kontener na galerię z Creatures -->
+            <div class="GalleryContainer Creatures">
+                <!-- Miejsce na obrazy -->
+                <div class="gallery-items-container">
+                    <div class="gallery-item">
+                        <img src="/obrazy/Dargen/image1.png" alt="Dargen">
+                        <span class="item-text">Dargen</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/obrazy/First_Hound/image1.png" alt="First_Hound">
+                        <span class="item-text">First Hound</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/obrazy/Tzhar/image1.png" alt="Tzhar">
+                        <span class="item-text">Tzhar</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/obrazy/Crumb/image1.png" alt="Crumb">
+                        <span class="item-text">Crumb</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/obrazy/Dragon_Guardian/image1.png" alt="Dragon_Guardian">
+                        <span class="item-text">Dragon Guardian</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/obrazy/Dyuan/image1.png" alt="Dyuan">
+                        <span class="item-text">Dyuan</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/obrazy/Emerthal_Golem/image1.png" alt="Emerthal_Golem">
+                        <span class="item-text">Emerthal Golem</span>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/obrazy/Gnoul/image1.png" alt="Gnoul">
+                        <span class="item-text">Gnoul</span>
+                    </div>
+                </div>
+                <!-- Przycisk powrotu -->
+                <div class="back-to-conceptart-main-silde">
+                    <img src="/obrazy/drogowskaz.png">
+                </div>                
+            </div>
+
+        </section>
+
+        <section id="s_AboutAuthor" class="s_AboutAuthorSection">
+            <!-- Kontener z ramką -->
+            <div class="frame-container">
+                <img src="obrazy/transition bar.png" alt="Frame">
+            </div>
+
+            <!-- Kontener na tekst O Mnie-->
+            <div class="about-me-container">
+                <h1>About<br>Author</h1>
+                <p>Hi, my name is Brajan, and I’m a passionate Concept Artist. 
+                    I specialize in creating captivating visuals and designs, driven by a deep enthusiasm for art and creativity. 
+                    As a young artist aspiring to work in game development, I bring a positive attitude, dedication, and a strong desire to continuously improve my skills.
+                    I thrive on crafting unique concepts that breathe life into stories and worlds, with a focus on detail and originality. 
+                    My goal is to contribute to projects that inspire and engage audiences, combining my artistic vision with the needs of the team.
+                    Thank you for visiting my portfolio—I hope you enjoy exploring my work. 
+                    Feel free to reach out if you’re interested in collaboration or have any inquiries. Let’s create something amazing together!
+                    <br>
+                    @ brajan.stiff@email.com
+                    <br><br>
+                    Stay with the undying hope!
+                </p>
+            </div>
+            <!-- Kontener na zdjecie -->
+             <div class="my-photo">
+                <img src="obrazy/logo700.png">
+             </div>
+        </section>
+
+
+        <footer>
+            <p>@Esterath</p>
+        </footer>
+    </main>
+
+    <!-- #region Scripts -->
+    <script src="Scripts/interaktywna_mapa_part2.js"></script>
+    <script src="Scripts/Interaktywna_mapa.js"></script>
+    <script src="Scripts/toggleMenu.js"></script>
+    <script src="Scripts/Footer_wysun.js"></script>
+    <script src="Scripts/The undying hope glow in.js"></script>
+    <script src="Scripts/concept_art.js"></script>
+    <script src="Scripts/general.js"></script>
+    <script src="Scripts/lightbox2.js"></script>
+    <script src="Scripts/aboutAutohor.js"></script>
+    <script src="Scripts/s_Esterath_animacjaIsker.js"></script>
+    <script src="Scripts/rainAnimation.js"></script>
+    <script src="Scripts/story_slide.js"></script>
+
+
+    <script>
+
+
+
+
+
+    </script>
+
+
+    <!-- #endregion -->
+
+</body>
+
+</html>
