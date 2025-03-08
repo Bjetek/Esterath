@@ -1708,18 +1708,6 @@ input[name="r_map"] {
     }
 }
 
-/* Sytlizacja podpisów galerii lightbox2 */
-.lightbox .lb-data .lb-caption {
-    font-size: 1.5rem;
-    /* Zmień rozmiar czcionki */
-    color: #fff;
-    /* Kolor tekstu */
-    line-height: 1.2;
-    /* Opcjonalne: odstęp między wierszami */
-}
-
-
-
 /* #endregion */
 
 /* #region About Author Slide */
@@ -2025,6 +2013,42 @@ input[name="r_map"] {
     height: 100%;
     object-fit: cover;
     /* Dopasowanie do sekcji */
+}
+
+/* #endregion */
+
+/* #region Styl dla podston (galerie) */
+/* Styl dla podstron galerii */
+.gallery-page {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    /* Czarne tło dla lepszego kontrastu */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.gallery-container {
+    width: 100%;
+    max-width: 90vw;
+    /* Maksymalna szerokość galerii */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery-container img {
+    max-width: 100%;
+    max-height: 90vh;
+    /* Obraz nie przekracza wysokości ekranu */
+    margin: 15px 0;
+    /* Odstęp między obrazami */
+    border: 15px solid white;
+    /* Biała ramka */
+    object-fit: contain;
+    /* Zapewnia, że obraz nie zostanie przycięty */
 }
 
 /* #endregion */
