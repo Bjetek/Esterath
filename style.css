@@ -619,7 +619,7 @@ main {
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1025px) {
     .s_StorySection {
         display: flex;
         flex-direction: column;
@@ -697,7 +697,7 @@ main {
     }
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 1401px) {
     .about-story-container {
         flex: 0 0 65%;
     }
@@ -717,11 +717,11 @@ main {
     }
 
     .about-story-container h1 {
-        font-size: 3.6rem;
+        font-size: 3.4rem;
     }
 
     .about-story-container p {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 }
 
@@ -1375,8 +1375,8 @@ input[name="r_map"] {
 .flip-card-container {
     /* width: 33.33%;  */
     /* height: 80%;  */
-    width: 250px;
-    height: 400px;
+    width: 350px;
+    height: 500px;
     perspective: 1000px;
     /* Zachowanie efektu 3D */
 }
@@ -1892,7 +1892,7 @@ input[name="r_map"] {
 
 }
 
-@media (min-width: 1201px) {
+@media (min-width: 1401px) {
     .about-me-container {
         flex: 0 0 55%;
     }
