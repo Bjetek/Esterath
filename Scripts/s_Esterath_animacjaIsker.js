@@ -43,14 +43,14 @@ function generateSparks(number) {
         spark.style.left = `${startX}%`;
 
         // Losowe przemieszczenie w poziomie i pionie
-        let moveX = Math.random() * 5000 - 2500;
-        let moveY = -(Math.random() * 2400 + 400);
+        let moveX = Math.random() * 1000 - 500;
+        let moveY = -(Math.random() * 600 + 400);
 
         spark.style.setProperty('--spark-x', `${moveX}px`);
         spark.style.setProperty('--spark-y', `${moveY}px`);
 
-        // Losowy czas trwania animacji od 2 do 10 sekund
-        const randomDuration = Math.random() * 8 + 2; 
+        // Losowy czas trwania animacji
+        const randomDuration = Math.random() * 12 + 6; 
         spark.style.animationDuration = `${randomDuration}s`;
 
         // Dodanie iskry do kontenera
