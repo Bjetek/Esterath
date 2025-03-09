@@ -32,20 +32,20 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // Obsługa scrollowania strony
-    let currentSection = 0;
-    window.addEventListener("wheel", (event) => {
-        if (isScrolling || isInsideScrollableContainer(event)) return;
+    // let currentSection = 0;
+    // window.addEventListener("wheel", (event) => {
+    //     if (isScrolling || isInsideScrollableContainer(event)) return;
 
-        if (event.deltaY > 0) {
-            // Scroll w dół
-            currentSection = Math.min(currentSection + 1, sections.length - 1);
-        } else if (event.deltaY < 0) {
-            // Scroll w górę
-            currentSection = Math.max(currentSection - 1, 0);
-        }
+    //     if (event.deltaY > 0) {
+    //         // Scroll w dół
+    //         currentSection = Math.min(currentSection + 1, sections.length - 1);
+    //     } else if (event.deltaY < 0) {
+    //         // Scroll w górę
+    //         currentSection = Math.max(currentSection - 1, 0);
+    //     }
 
-        scrollToSection(currentSection);
-    });
+    //     scrollToSection(currentSection);
+    // });
 
     // Obsługa scrollowania w kontenerach objętych wyjątkiem
     scrollableContainers.forEach(container => {
