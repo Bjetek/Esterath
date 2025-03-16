@@ -6,9 +6,9 @@ function isScreenLargeEnough() {
 const imageElement = document.querySelector('.image-container img');
 
 // Domyślna ścieżka obrazu
-const defaultImage = 'obrazy/ilustracja-mapa2dark.png';
+const defaultImage = 'obrazy/ilustracja-mapa2dark.jpg';
 // Ścieżka dla Regionu 1
-const region1Image = 'obrazy/ilustracja-mapa2light.png';
+const region1Image = 'obrazy/ilustracja-mapa2light.jpg';
 
 // Ścieżka do niestandardowej ikony kursora
 const customCursor = 'obrazy/loupe.png';

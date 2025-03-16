@@ -238,7 +238,7 @@ main {
 
 /* #region Home Slide */
 .s_Esterath-background {
-    background-image: url('obrazy/Esterth_Welcome.png');
+    background-image: url('obrazy/Esterth_Welcome.jpg');
     position: relative;
     background-size: cover;
     background-position: center;
@@ -355,7 +355,7 @@ main {
 
 /* #region About Esterath Slide */
 .s_AboutEsterathSection {
-    background-image: url('obrazy/esterath_story_background.png');
+    background-image: url('obrazy/esterath_story_background.jpg');
     position: relative;
     background-size: cover;
     background-position: center;
@@ -539,7 +539,7 @@ main {
 
 /* #region Story Slide */
 .s_StorySection {
-    background-image: url('obrazy/storyBackground.png');
+    background-image: url('obrazy/storyBackground.jpg');
     position: relative;
     background-size: cover;
     background-position: center;
@@ -1344,7 +1344,7 @@ input[name="r_map"] {
 
 /* #region Concept Art Slide */
 .conceptArtMainPage {
-    background-image: url('obrazy/conceptArtBackground.png');
+    background-image: url('obrazy/conceptArtBackground.jpg');
     position: relative;
     background-size: cover;
     background-position: center;
@@ -1722,7 +1722,7 @@ input[name="r_map"] {
 
 /* #region About Author Slide */
 .s_AboutAuthorSection {
-    background-image: url('obrazy/author_background.png');
+    background-image: url('obrazy/author_background.jpg');
     position: relative;
     background-size: cover;
     background-position: center;
