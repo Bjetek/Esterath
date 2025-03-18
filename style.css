@@ -1944,13 +1944,17 @@ input[name="r_map"] {
     }
 }
 
-@media (max-height: 600px) {
+@media (max-height: 650px) {
     .about-me-container h1 {
         font-size: 2.1rem
     }
 
     .about-me-container p {
         font-size: 1.3rem
+    }
+    .my-photo img{
+        height: 80%;
+        width: 80%;
     }
 }
 
