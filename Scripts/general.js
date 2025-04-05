@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Funkcja blokująca przewijanie strony w kontenerach objętych wyjątkiem
     const preventPageScroll = (event) => {
-        const target = event.target.closest(".region-description_v2, .gallery-items-container");
+        const target = event.target.closest(".region-description_v2");
         if (target) {
             // Sprawdź, czy można przewijać w kontenerze
             const canScrollDown = target.scrollHeight > target.scrollTop + target.clientHeight;

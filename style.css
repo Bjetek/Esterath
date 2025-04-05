@@ -96,6 +96,7 @@ nav {
     font-weight: bold;
     font-size: 1.2em;
     transition: text-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+    letter-spacing: 0.07cap;
 }
 
 .menu li a:hover {
@@ -254,7 +255,7 @@ main {
 
 .title-container {
     position: relative;
-    width: 80%;
+    width: 50%;
     max-width: 3360px;
     /*height: 60vh;*/
     aspect-ratio: 16/9;
@@ -280,7 +281,7 @@ main {
 .phrase {
     position: absolute;
     /* Zmiana na absolute */
-    font-size: clamp(1.2rem, 5vw, 10vh);
+    font-size: clamp(0.8rem, 3vw, 7vh);
     font-family: 'UndyingHope', sans-serif;
     color: #fff;
     background-color: transparent;
