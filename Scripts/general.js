@@ -79,15 +79,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Obsługa kopiowania adresu email
 document.querySelector('.email-icon').addEventListener('click', function () {
-    const email = this.getAttribute('data-email');
-    const notice = document.querySelector('.copy-notice');
+    const emailText = document.querySelector('.email-paragraph');
+    const email = this.dataset.email;
 
+    // Kopiowanie do schowka
     navigator.clipboard.writeText(email).then(() => {
-        notice.classList.add('show');
-        setTimeout(() => {
-            notice.classList.remove('show');
-        }, 2000);
-    }).catch(err => {
-        console.error('Failed to copy!', err);
+        emailText.classList.add('visible');
     });
 });
